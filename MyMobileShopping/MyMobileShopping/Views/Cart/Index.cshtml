@@ -1,0 +1,43 @@
+﻿
+@using MyMobileShopping.Models;
+@Model CartViewModel
+
+<h1>Your Cart (@Model.Products.Count Items)</h1>
+
+<table class="table table-bordered table-striped table-hover">
+    <thead>
+        <tr>
+            <th>S.No</th>
+            <th>Mobile Name</th>
+            <th>Mobile Price</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for (int i = 0; i < Model.Products.Count; i++)
+        {
+            <tr>
+                <td>@(i + 1)</td>
+                <td>@Model.Products[i].Name</td>
+                <td>@Model.Products[i].Amount</td>
+            </tr>
+        }
+        <tr>
+            <td colspan="2">Sub Total</td>
+            <td>@Model.SubTotal</td>
+        </tr>
+        <tr>
+            <td colspan="2">Tax</td>
+            <td>@Model.Tax</td>
+        </tr>
+        <tr>
+            <td colspan="2">Discount</td>
+            <td>@Model.Discount</td>
+        </tr>
+        <tr>
+            <td colspan="2">Grand Total</td>
+            <td>@Model.Total</td>
+        </tr>
+    </tbody>
+
+
+</table> 

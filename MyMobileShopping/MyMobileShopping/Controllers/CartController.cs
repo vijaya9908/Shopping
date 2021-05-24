@@ -1,4 +1,6 @@
 ﻿using MyMobileShopping.BusinessLayer;
+using MyMobileShopping.BusinessLayer.Interfaces;
+using MyMobileShopping.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,13 +9,28 @@ using System.Web.Mvc;
 
 namespace MyMobileShopping.Controllers
 {
+    
     public class CartController : Controller
     {
-        // GET: Cart
-        public ActionResult Index()
+        private readonly ICalculateCartFlow calculateCartFlow;
+        public CartController(ICalculateCartFlow calculateCartFlow)
+        {
+            this.calculateCartFlow = calculateCartFlow;
+        }
+       // GET: Cart
+       public ActionResult Index()
         {
             List<Product> products = (List<Product>)Session["CartItems"] ?? new List<Product>();
-
+            CartModel cartModel = calculateCartFlow.Calculate(products);
+            CartViewModel cartViewModel = new CartViewModel
+            {
+                Products = cartModel.Products,
+                Discount = cartModel.Discount,
+                SubTotal = cartModel.SubTotal,
+                Tax = cartModel.Tax,
+                Total = cartModel.Total
+            };
+            return View(cartViewModel);
         }
         [HttpPost]
         public ActionResult AddToCart(Product product)

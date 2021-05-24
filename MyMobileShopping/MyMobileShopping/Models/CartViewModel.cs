@@ -1,12 +1,12 @@
-﻿using System;
+﻿using MyMobileShopping.BusinessLayer;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Web;
 
-namespace MyMobileShopping.BusinessLayer
+namespace MyMobileShopping.Models
 {
-   public class CartModel
+    public class CartViewModel
     {
         public List<Product> Products { get; set; }
         public decimal SubTotal { get; set; }
