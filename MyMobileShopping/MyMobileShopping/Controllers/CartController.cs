@@ -12,7 +12,8 @@ namespace MyMobileShopping.Controllers
         // GET: Cart
         public ActionResult Index()
         {
-            return View();
+            List<Product> products = (List<Product>)Session["CartItems"] ?? new List<Product>();
+
         }
         [HttpPost]
         public ActionResult AddToCart(Product product)

@@ -41,7 +41,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CartModel.cs" />
+    <Compile Include="Implementation\CalculateCartFlow.cs" />
+    <Compile Include="Implementation\CalculateDiscount.cs" />
+    <Compile Include="Implementation\CalculateSubTotal.cs" />
+    <Compile Include="Implementation\CalculateTax.cs" />
+    <Compile Include="Implementation\CalculateTotal.cs" />
     <Compile Include="Implementation\ProductDetails.cs" />
+    <Compile Include="Interfaces\ICalculateCartFlow.cs" />
+    <Compile Include="Interfaces\ICalculateDiscount.cs" />
+    <Compile Include="Interfaces\ICalculateSubTotal.cs" />
+    <Compile Include="Interfaces\ICalculateTax.cs" />
+    <Compile Include="Interfaces\ICalculateTotal.cs" />
     <Compile Include="Product.cs" />
     <Compile Include="Interfaces\IProductDetails.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
