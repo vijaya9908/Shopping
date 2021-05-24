@@ -16,13 +16,23 @@ namespace MyMobileShopping.BusinessLayer.Implementation
            {
             new Product
             {
-                MobileName = "Iphone 11",
-                MobilePrice = 78000M
+                Name = "Iphone 11",
+                Amount = 78000M
             },
             new Product
             {
-                MobileName = "One Plus",
-                MobilePrice = 48000M
+                Name = "One Plus",
+                Amount = 48000M
+            },
+            new Product
+            {
+               Name = "Iphone 12",
+                Amount = 98000M
+            },
+            new Product
+            {
+                Name = "One Plus pro",
+                Amount = 58000M
             },
             };
             return products;

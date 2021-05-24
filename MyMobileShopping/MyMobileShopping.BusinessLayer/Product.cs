@@ -8,7 +8,7 @@ namespace MyMobileShopping.BusinessLayer
 {
     public class Product
     {
-        public string MobileName { get; set; }
-        public decimal MobilePrice { get; set; }
+        public string Name { get; set; }
+        public decimal Amount { get; set; }
     }
 }

@@ -7,14 +7,29 @@
         <div class=" col-md-3">
             <div class="panel panel-default">
                 <div class="panel-heading text-center">
-                    <h3>@product.MobileName</h3>
+                    <h3>@product.Name</h3>
                 </div>
                 <div class="panel-body">
                     <div class="row">
-                        <h4 class="text-center">@product.MobilePrice</h4>
+                        <h4 class="text-center" data-amount="@product.Amount">Rs. @product.Amount</h4>
+                    </div>
+                    <div class="panel-footer">
+                        <center>
+                            <button class="btn btn-primary cart-button">
+                                <span class="glyphicon glyphicon-shopping-cart">Add To Cart</span>
+                            </button>
+                        </center>
+
                     </div>
                 </div>
             </div>
         </div>
     }
 </div>
+<div id="popupmodal">
+
+</div>
+@section scripts{
+    <script src="~/Scripts/Product.js"></script>
+}
+
