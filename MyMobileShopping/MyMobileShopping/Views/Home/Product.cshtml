@@ -1,0 +1,20 @@
+﻿@using MyMobileShopping.Models;
+@Model ProductsViewModel
+<div class="row">
+
+    @foreach (var product in Model.Products)
+    {
+        <div class=" col-md-3">
+            <div class="panel panel-default">
+                <div class="panel-heading text-center">
+                    <h3>@product.MobileName</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <h4 class="text-center">@product.MobilePrice</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>
