@@ -1,6 +1,11 @@
 ﻿
 @using MyMobileShopping.Models;
 @Model CartViewModel
+<script>
+    var totalRate=@Model.Total
+</script>
+
+@Styles.Render("~/Content/CheckOutPage.css")
 
 <h1>Your Cart (@Model.Products.Count Items)</h1>
 
@@ -40,4 +45,17 @@
     </tbody>
 
 
-</table> 
+</table>
+<div class="payment-Options">
+    <h3>Payment Options</h3>
+    <input type="radio" id="creditCard" name="payment-Options" value="card">
+    <label for="creditCard">CREDIT CARD</label><br>
+    <input type="radio" id="cod" name="payment-Options" value="cod">
+    <label for="cod">COD</label><br>
+</div>
+<div class="checkOut">
+    <button type="button" class="btn btn-primary disabled" id="checkOut">CheckOut</button>
+</div>
+@section scripts{
+    <script src="~/Scripts/Cart.js"></script>
+}

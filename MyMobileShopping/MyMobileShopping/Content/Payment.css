@@ -1,0 +1,38 @@
+﻿.payment-form {
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 900;
+    width:400px;
+}
+
+.container {
+    background-color: #f2f2f2;
+    padding: 5px 20px 40px 20px;
+    border: 1px solid lightgreen;
+    border-radius: 30px;
+    margin: 160px 520px 0 700px;
+}
+
+.payment-form-element {
+    padding: 13px;
+}
+
+.card-number, .cvv {
+    width: 350px;
+    height: 35px;
+    font-size: 23px;
+}
+
+.payment-btn {
+    text-align: center;
+    border-radius: 10px;
+    padding: 10px 12px;
+    width: 80%;
+    font-size: 22px;
+    color: aqua;
+}
+
+.payment-btn-div {
+    text-align: center;
+    padding-top: 45px
+}

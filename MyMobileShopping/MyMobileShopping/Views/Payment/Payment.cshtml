@@ -1,0 +1,45 @@
+﻿
+@{
+    ViewBag.Title = "Payment";
+    Layout = null;
+}
+
+@Styles.Render("~//Content/Payment.css")
+
+<h1 style="text-align:center">Payment Form - CreditCard</h1>
+
+<h2>Amount to be Paid : @ViewBag.Total </h2>
+
+
+<div class="payment-form container">
+    <div class="payment-form-element">
+        <label>Card-Number :</label>
+        <input type="number" class="card-number" maxlength="16" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" id="card-number">
+
+    </div>
+    <div class="payment-form-element">
+        <label>CVV :</label>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="number" maxlength="4" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" class="cvv" id="cvv">
+
+    </div>
+    <div class="payment-form-element">
+        <label>Expiry Date :</label>&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="date" class="expiry-date" style="height:30px" id="expiry-date">
+
+    </div>
+    <div class="payment-btn-div">
+        <button type="button" class="btn btn-primary payment-btn" id="makePayment">Pay</button>
+    </div>
+
+
+</div>
+
+<div id="payment-status">
+    <p payment-status-msg></p>
+</div>
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/bootstrap")
+<script type="text/javascript" src="~/Scripts/Cart.js"></script>
+
+
